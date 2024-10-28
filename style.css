@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'popins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height:auto;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span{
+    color: rgb(47, 154, 178);
+    text-shadow: 0 0 10px rgb(47, 154, 178);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(47, 154, 178);
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover:before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: rgb(47, 154, 178);
+}
+
+section{
+    width: 100%;
+    min-height: 90vh;
+}
+
+#Home{
+    background-image: url('ombak.gif'), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+section .home-container{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: center;
+    background-size: cover;
+}
+
+.home-container .image img{
+    width: 55vh;
+    height: 55vh;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: drop-shadow(2px 2px 20px rgb(47, 154, 178));
+    margin-top: 50px;
+}
+
+.home-container .image:hover{
+    animation: animate 1.5s ease-in-out;
+}
+
+@keyframes animate{
+    0%{
+        scale: 1;
+    }
+
+    50%{
+        scale: 1.05;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+.home-container .content{
+    color: white;
+    width: 60%;
+}
+
+.content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 20px;
+}
+
+.content h1 span{
+    color: rgb(47, 154, 178);
+    text-shadow: 0 0 10px rgb(47, 154, 178);
+}
+
+.multiText{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.content p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(47, 154, 178);
+    border-radius: 50%;
+    color: rgb(47, 154, 178);
+    margin: 5px 15px 15px 0px;
+    font-size: 1.3rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    color: black;
+    background-color: rgb(47, 154, 178);
+    filter: drop-shadow(2px 2px 20px rgb(47, 154, 178));
+}
+
+.content button{
+    width: 20%;
+    height: 6vh;
+    margin: 30px 0px 0px 0px;
+    background-color: rgb(47, 154, 178);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: rgb(47, 154, 178);
+    border: 2px solid rgb(47, 154, 178);
+    background-color: transparent;
+    font-weight: 700;
+    filter: drop-shadow(2px 2px 20px rgb(47, 154, 178));
+}
+
+/* Bagian About */
+section .content{
+    width: 80%;
+    margin: 0px auto;
+    font-family:'popins', sans-serif;
+}
+
+.about .content{
+    background-image: url('JPN-Gate.gif'), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, 8));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.about .about-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-details img{
+    width: 55vh;
+    height: 55vh;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: drop-shadow(2px 2px 20px rgb(47, 154, 178));
+    margin: 0px 0px 30px 30px;
+}
+
+section .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+section .title span::before,
+section .title span::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: rgb(47, 154, 178);
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after{
+    bottom: -7px;
+    align-items: center;
+    width: 70%;
+    transform: translateX(20%);
+}
+
+.about .about-details .left{
+    width: 45%;
+    margin-right: 50px;
+}
+
+section .topic{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.about-details .right p{
+    text-align: justify;
+    color: white;
+}
+
+section .button{
+    margin: 16px 0;
+}
+
+section .button button{
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background: rgb(47, 154, 178);
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover{
+    border-color: rgb(47, 154, 178);
+    background-color: white;
+    color: rgb(47, 154, 178);
+}
+
+#Project{
+    background-image: url('Kimi.gif'), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, 8));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+}
+
+.Skills .title span{
+    margin-top: 100px;
+}
+
+.Skills .boxes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Skills .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid rgb(47, 154, 178);
+    padding: 30px 10px;
+    margin: 20px;
+    box-shadow: 0 5px 10px black;
+    cursor: pointer;
+    color: white;
+    font-size: 50px;
+    transition: 1s ease;
+}
+
+
+.Skills .boxes .box:hover{
+    color: white;
+    scale: 1.1;
+}
+
+.card-image{
+    display: inline-block;
+    width: 45%;
+    margin-left: 35px;
+    text-align: center;
+    background: linear-gradient(rgb(47, 154, 178));
+    bottom: 0;
+    left: 0;
+    color: white;
+    justify-content: center;
+    opacity: 1;
+    transition: 1s ease;
+}
+
+h3{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+h2{
+    justify-content: center;
+
+}
+
+.card-image a img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50px;
+    transition: 0.3s linear;
+}
+
+.card-image a img:hover{
+    filter: drop-shadow(2px 2px 20px rgb(47, 154, 178));
+    scale: 1.1;
+}
+
+.timeline-items{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+#Education .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 180px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+
+#Education .title::before,
+#Education .title::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 130px;
+    background: rgb(47, 154, 178);
+    left: 100;
+    bottom: 0;
+}
+
+#Education .title:after{
+    bottom: -7px;
+    align-items: center;
+    width: 80px;
+    
+}
+  
+.timeline-items::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(47, 154, 178);
+    left: calc(50% - 1px);
+}
+  
+.timeline-items{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+  
+.timeline-items:last-child{
+    margin-bottom: 0;
+}
+  
+  
+.timeline-items:nth-child(ood){
+    padding-right: calc(50% - 30px);
+    text-align: right;
+}
+
+.timeline-items:nth-child(even){
+    padding-left:  calc(50% - 30px);
+ }
+  
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color: rgb(47, 154, 178);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;            
+}
+  
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+  
+.timeline-content{
+    background-color: rgb(47, 154, 178);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(18, 18, 255, 0.25);
+    padding: 30px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+  
+.timeline-content:hover{
+    transition: scale(1.05);
+    box-shadow: 0 0 25px rgb(47, 154, 178);
+}
+  
+.timeline-content h3{
+    font-size: 20px;
+    color: white;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+  
+.timeline-content p{
+    color: white;
+    opacity: 0.8;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+/* Bagian Contact */
+#Contact{
+    background-image: url('City.gif'), linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0, 8));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    margin-top: 250px;
+}
+
+.Contact .content{
+    padding: 30px 0;
+}
+
+.Contact .text{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.Contact .text p{
+    color: white;
+    margin: 20px;
+}
+
+footer{
+    padding: 15px 0;
+    text-align: center;
+    font-family:'popins', sans-serif;
+}
+
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+
+footer .text span a{
+    font-weight: 500;
+    color: white;
+}
+
+footer .text span a:hover{
+    text-decoration: underline;
+}
+
+form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+form .input box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .input-box input,
+form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: gainsboro;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+form .input-box input{
+    width: 49%;
+}
+
+form textarea{
+    resize: none;
+}
+
+form .btn{
+    margin-top: 4rem;
+    cursor: pointer;
+    background-color: rgb(47, 154, 178);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    box-shadow:  0 0 1rem rgb(47, 154, 178);;
+}
